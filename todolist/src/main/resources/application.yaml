@@ -1,0 +1,21 @@
+server:
+  port: 1234
+  servlet:
+    context-path: /todolist
+
+spring:
+  datasource:
+    username: enterUsernameHere
+    password: enterPasswordHere
+    url: enterURLhere
+    driver-class-name: org.postgresql.Driver
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE

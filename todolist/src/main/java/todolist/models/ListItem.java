@@ -1,10 +1,8 @@
 package todolist.models;
 
-
 import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
-import java.sql.Timestamp;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "listitems")
@@ -13,19 +11,19 @@ public class ListItem {
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE, generator = "generator")
     private int id;
-
     private String title;
     private String description;
-    private Timestamp posted;
+    @Column(name = "doby")
+    private LocalDate doBy;
 
     public ListItem() {
     }
 
-    public ListItem(int id, String title, String description, Timestamp posted) {
+    public ListItem(int id, String title, String description, LocalDate doBy) {
         this.id = id;
         this.title = title;
         this.description = description;
-        this.posted = posted;
+        this.doBy = doBy;
     }
 
     public int getId() {
@@ -52,12 +50,12 @@ public class ListItem {
         this.description = description;
     }
 
-    public Timestamp getPosted() {
-        return posted;
+    public LocalDate getDoBy() {
+        return doBy;
     }
 
-    public void setPosted(Timestamp posted) {
-        this.posted = posted;
+    public void setDoBy(LocalDate doBy) {
+        this.doBy = doBy;
     }
 
     @Override
@@ -66,7 +64,7 @@ public class ListItem {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
-                ", posted=" + posted +
+                ", doby=" + doBy +
                 '}';
     }
 }
