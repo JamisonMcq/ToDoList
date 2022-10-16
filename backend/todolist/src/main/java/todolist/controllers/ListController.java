@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/")
-//@CrossOrigin(origins = {"http://localhost:4200", "http://localhost:3000"}, allowCredentials = "true")
+@CrossOrigin(origins = {"http://localhost:4200", "http://localhost:1234"}, allowCredentials = "true")
 public class ListController {
 
     private ListService listService;
