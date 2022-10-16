@@ -11,7 +11,7 @@ import todolist.services.ListService;
 import java.util.List;
 
 @RestController
-@RequestMapping("todo")
+@RequestMapping("api/")
 //@CrossOrigin(origins = {"http://localhost:4200", "http://localhost:3000"}, allowCredentials = "true")
 public class ListController {
 
@@ -24,13 +24,13 @@ public class ListController {
         this.listRepo = listRepo;
     }
 
-    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping("list")
     public ResponseEntity getAllList(){
         List<ListItem> allList = listService.getAllListItems();
         return ResponseEntity.ok(allList);
     }
 
-    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping("new")
     public ResponseEntity createItem(@RequestBody ListItem item){
         return ResponseEntity.status(HttpStatus.CREATED).body(listService.saveListItem(item));
     }

@@ -1,12 +1,19 @@
 package todolist.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 @Table(name = "listitems")
 public class ListItem {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -14,48 +21,6 @@ public class ListItem {
     private String description;
     @Column(name = "doby")
     private LocalDate doBy;
-
-    public ListItem() {
-    }
-
-    public ListItem(int id, String title, String description, LocalDate doBy) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.doBy = doBy;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public LocalDate getDoBy() {
-        return doBy;
-    }
-
-    public void setDoBy(LocalDate doBy) {
-        this.doBy = doBy;
-    }
 
     @Override
     public String toString() {
