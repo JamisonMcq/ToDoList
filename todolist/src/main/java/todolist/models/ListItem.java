@@ -1,15 +1,14 @@
 package todolist.models;
 
-import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "listitems")
 public class ListItem {
-    @GenericGenerator(name = "generator", strategy = "increment")
+
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE, generator = "generator")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String title;
     private String description;
