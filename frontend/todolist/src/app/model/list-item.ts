@@ -1,8 +1,6 @@
 export class ListItem {
-  id:number | undefined;
-  title:string | undefined;
-  description:string | undefined;
+  id: number | undefined;
+  title: string | undefined;
+  description: string | undefined;
   doBy: Date | undefined;
-
-
 }
