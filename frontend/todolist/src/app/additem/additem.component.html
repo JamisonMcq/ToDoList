@@ -1,20 +1,24 @@
-<div>
-  <form>
+<div class="card">
+  <form class="container">
+    <h3 class="text-center"> Add New Thing To Do </h3>
     <div class="form-group">
-      <label for="exampleTitle"> Title </label>
+      <label for="exampleTitle"> *Title </label>
       <input type="text" class="form-control" id="exampleTitle" aria-describedby="titleHelp" placeholder="Enter Title">
       <small id="titleHelp" class="form-text text-muted"> Enter a title of your thing to do</small>
     </div>
     <div class="form-group">
-      <label for="exampleDescription"> Description </label>
+      <label for="exampleDescription"> *Description </label>
       <input type="text" class="form-control" id="exampleDescription" placeholder="Description">
       <small id="titleHelp" class="form-text text-muted"> Enter a description</small>
-
     </div>
     <div class="form-group">
       <label for="exampleDate"> Do By </label>
       <input type="text" class="form-control" id="exampleDate" placeholder="mm/dd/yyyy">
-      <small id="titleHelp" class="form-text text-muted"> Enter a do by date in format shown</small>
+      <small id="titleHelp" class="form-text text-muted"> Enter a do by date in format shown (optional)</small>
+    </div>
+    <div class="form-group">
+      <button type="button" class="btn btn-success" (click)="btnClick();">Add</button>
     </div>
   </form>
+
 </div>
