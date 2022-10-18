@@ -20,7 +20,7 @@ public class ListItem {
     private String title;
     private String description;
     @Column(name = "doby")
-    private LocalDate doBy;
+    private String doBy;
 
     @Override
     public String toString() {

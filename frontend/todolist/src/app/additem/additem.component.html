@@ -1,25 +1,34 @@
-<div class="card">
-  <form class="container">
+<div class="container">
+  <form [formGroup]="addItemForm" id="item-form">
     <h3 class="text-center"> Add New Thing To Do </h3>
     <div class="form-group">
       <label for="exampleTitle"> *Title </label>
-      <input type="text" class="form-control" id="exampleTitle" aria-describedby="titleHelp" placeholder="Enter Title">
-      <small id="titleHelp" class="form-text text-muted"> Enter a title of your thing to do</small>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleTitle"
+        formControlName= "title"
+        aria-describedby="titleHelp"
+        placeholder="Enter Title"
+        />
+      <small
+        id="titleHelp"
+        class="form-text text-muted"> Enter a title of your thing to do
+      </small>
     </div>
     <div class="form-group">
       <label for="exampleDescription"> *Description </label>
-      <input type="text" class="form-control" id="exampleDescription" placeholder="Description">
-      <small id="titleHelp" class="form-text text-muted"> Enter a description</small>
+      <textarea class="form-control" id="exampleDescription" formControlName="description" placeholder="Description"></textarea>
+      <small id="descriptionHelp" class="form-text text-muted"> Enter a description</small>
     </div>
     <div class="form-group">
       <label for="exampleDate"> Do By </label>
-      <input type="text" class="form-control" id="exampleDate" placeholder="mm/dd/yyyy">
-      <small id="titleHelp" class="form-text text-muted"> Enter a do by date in format shown (optional)</small>
+      <input type="text" class="form-control" id="exampleDate" formControlName="doBy" placeholder="mm/dd/yyyy">
+      <small id="dateHelp" class="form-text text-muted"> Enter a do by date in format shown (optional)</small>
     </div>
     <div class="form-group">
-      <button type="button" class="btn btn-success" (click)="btnAdd();">Add</button>
+      <button type="button" class="btn btn-success" [disabled]= "!addItemForm.valid" (click)="btnAdd();">Add</button>
       <button type="button" class="btn btn-danger back" (click)="btnBack();">Back</button>
-
     </div>
   </form>
 
