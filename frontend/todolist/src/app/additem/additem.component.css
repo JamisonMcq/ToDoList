@@ -1,7 +1,6 @@
 input {
   width: 100%;
-
-  border: 1px solid black;
+  border: 1px solid;
 }
 #item-form {
   display: flex;
@@ -10,6 +9,7 @@ input {
   align-items: center;
   min-height: 60vh;
   width: 70%;
+  background-color: white;
 
 
   /* margin: auto; */
@@ -21,8 +21,20 @@ input {
 .form-group{
   width: 70%;
 }
-.card {
-  border: none;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  width: 70%;
+  background-color: lightgray;
+}
+.parent{
+  display: flex;
+  justify-content: center;
+  margin: 100px;
+  /* border: 500px; */
 }
 .btn{
   /* display: flex; */

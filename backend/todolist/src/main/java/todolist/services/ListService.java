@@ -6,6 +6,7 @@ import todolist.models.ListItem;
 import todolist.repos.ListRepo;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ListService {
@@ -22,6 +23,10 @@ public class ListService {
 
     public ListItem saveListItem(ListItem listItem){
         return listRepo.save(listItem);
+    }
+
+    public Optional<ListItem> findById(int id){
+        return listRepo.findById(id);
     }
 
     public void delete(int id) {

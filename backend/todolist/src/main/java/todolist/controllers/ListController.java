@@ -9,6 +9,7 @@ import todolist.models.ListItem;
 import todolist.repos.ListRepo;
 import todolist.services.ListService;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("api/")
@@ -33,5 +34,16 @@ public class ListController {
     @PostMapping("new")
     public ResponseEntity createItem(@RequestBody ListItem item){
         return ResponseEntity.status(HttpStatus.CREATED).body(listService.saveListItem(item));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<ListItem> deleteItem(@PathVariable("id") int id){
+        Optional<ListItem> isItem = listService.findById(id);
+
+        if(!isItem.isPresent())
+            return ResponseEntity.notFound().build();
+
+        listService.delete(id);
+        return ResponseEntity.ok(isItem.get());
     }
 }

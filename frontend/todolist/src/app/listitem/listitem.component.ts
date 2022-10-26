@@ -16,13 +16,23 @@ export class ListitemComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.listService.getList().subscribe((data: ListItem[]) => {
-      console.log(data);
-      this.listitem = data;
-    });
+    this.fetchData();
   }
 
   btnClick = () => {
     this.router.navigate(['add']);
   };
+
+  onDeleteItem(id: number) {
+    this.listService.deleteItem(id).subscribe(() => {
+      this.fetchData();
+    });
+  }
+
+  fetchData() {
+    this.listService.getList().subscribe((data: ListItem[]) => {
+      console.log(data);
+      this.listitem = data;
+    });
+  }
 }

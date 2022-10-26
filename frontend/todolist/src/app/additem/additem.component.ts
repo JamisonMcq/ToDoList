@@ -20,16 +20,6 @@ export class AdditemComponent implements OnInit {
   ngOnInit(): void {}
 
   btnAdd = () => {
-    // if (
-    //   !this.addItemForm.get('title')!.value ||
-    //   !this.addItemForm.get('description')!.value ||
-    //   !this.addItemForm.get('doBy')!.value
-    // ) {
-    //   alert('Please Enter the Requrired Fields');
-    //   return;
-    // }
-    // this.addItemForm.setValue(this.addItemForm.get('title')!.value);
-
     this.addService
       .addItem(
         this.addItemForm.get('title')!.value as string,

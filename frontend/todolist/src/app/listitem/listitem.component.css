@@ -3,12 +3,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 60vh;
+  min-height: 80vh;
   width: 70%;
+  background-color: lightgray;
 }
 .card{
-  width: 75%;
+  width: 90%;
   border: none;
+  height: 70%;
 }
 .card-body {
   padding: 10px;
@@ -17,10 +19,19 @@
 .btn {
   display: flex;
   align-items:left;
-  width: 9%;
+  width: 15%;
   justify-content: center;
   margin-left: auto;
   margin-right: 2%;
   margin-bottom: 2%;
+}
+.parent {
+  display: flex;
+  justify-content: center;
+  margin: 100px;
+  /* border: 500px; */
+}
 
+.btn-danger {
+  width: 70%;
 }
