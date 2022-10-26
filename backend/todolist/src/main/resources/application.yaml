@@ -3,9 +3,9 @@ server:
 
 spring:
   datasource:
-    username: jamisonm
-    password: Randomdogpark
-    url: jdbc:postgresql://todolist.cwi3jukycyjs.us-east-1.rds.amazonaws.com:5432/postgres
+    username: {DB-USERNAME}
+    password: {DB-PASSWORD}
+    url: {DB-URL}
     driver-class-name: org.postgresql.Driver
 
 logging:
