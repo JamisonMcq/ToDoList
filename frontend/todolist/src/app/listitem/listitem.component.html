@@ -1,0 +1,26 @@
+<div class="parent">
+    <div class="container">
+      <h3 class="text-center"> To do List</h3>
+      <div class="card">
+        <div class="card-body">
+          <table class="table table-striped">
+            <thead>
+              <th> Title </th>
+              <th> Description </th>
+              <th> Do By </th>
+            </thead>
+            <tbody>
+              <tr *ngFor = "let list of listitem">
+                <td>{{list.title}}</td>
+                <td>{{list.description}}</td>
+                <td>{{list.doBy}}</td>
+                <td><button class="btn btn-danger" (click)="onDeleteItem(list.id)"> Delete </button> </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <button type="button" class="btn btn-success" (click)="btnClick();">Add</button>
+      </div>
+    </div>
+</div>
+

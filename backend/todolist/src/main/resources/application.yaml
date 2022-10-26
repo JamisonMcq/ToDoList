@@ -1,0 +1,19 @@
+server:
+  port: 1234
+
+spring:
+  datasource:
+    username: {DB-USERNAME}
+    password: {DB-PASSWORD}
+    url: {DB-URL}
+    driver-class-name: org.postgresql.Driver
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
