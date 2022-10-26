@@ -1,0 +1,5 @@
+todolist\controllers\ListController.class
+todolist\TodolistApplication.class
+todolist\models\ListItem.class
+todolist\services\ListService.class
+todolist\repos\ListRepo.class
