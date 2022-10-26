@@ -1,7 +1,7 @@
 # ToDoList
 Simple ToDoList Application
 
-Author:Jamison McQueary
+Author: Jamison McQueary
 
 Technologies used:
   Java 8
